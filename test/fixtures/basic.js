@@ -1,0 +1,2 @@
+array.FUN(function f() {
+});

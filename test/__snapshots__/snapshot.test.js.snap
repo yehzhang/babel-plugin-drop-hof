@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match snapshots of generated code for forEach, basic.js 1`] = `
+"var _a = array;
+
+var _f = function f() {};
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, collected.js 1`] = `
+"var _a = array;
+
+var _f = function f() {};
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+
+var result = undefined;
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, excessive-arguments.js 1`] = `
+"array.forEach(function () {}, d, e);
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, function-in-ternary.js 1`] = `
+"var result = a ? array.forEach(function f() {}) : b.c;
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, function-unwrapping.js 1`] = `
+"var _a = array;
+
+var _f = function () {};
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, function-unwrapping-reference.js 1`] = `
+"function f2() {}
+var _a = array2;
+var _f = f2;
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+
+var f3 = function () {};
+var _a2 = array3;
+var _f2 = f3;
+
+for (var _i2 = 0; _i2 < _a2.length; _i2++) {
+  _f2(_a2[_i2], _i2, _a2);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, hof-no-call.js 1`] = `
+"array.forEach;
+array.forEach.b;
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, identifier-property.js 1`] = `
+"array[forEach](function () {});
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, literal-property.js 1`] = `
+"var _a = array;
+
+var _f = function f() {};
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, non-hof.js 1`] = `
+"array(b);
+array[b];
+array.b(c);
+array.b().c.d().e;
+function array(b) {
+  return c.d;
+}
+for (var i = 0; i < 1; i++) {
+  i++;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for map, basic.js 1`] = `
+"var _a = array;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for map, collected.js 1`] = `
+"var _a = array;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+
+var result = _r;
+"
+`;
+
+exports[`Match snapshots of generated code for map, excessive-arguments.js 1`] = `
+"array.map(function () {}, d, e);
+"
+`;
+
+exports[`Match snapshots of generated code for map, function-in-ternary.js 1`] = `
+"var result = a ? array.map(function f() {}) : b.c;
+"
+`;
+
+exports[`Match snapshots of generated code for map, function-unwrapping.js 1`] = `
+"var _a = array;
+
+var _f = function () {};
+
+var _r = [];
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for map, function-unwrapping-reference.js 1`] = `
+"function f2() {}
+var _a = array2;
+var _f = f2;
+var _r = [];
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+
+var f3 = function () {};
+var _a2 = array3;
+var _f2 = f3;
+var _r2 = [];
+
+for (var _i2 = 0; _i2 < _a2.length; _i2++) {
+  _z2 = _f2(_a2[_i2], _i2, _a2);
+
+  _r2.push(_z2);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for map, hof-no-call.js 1`] = `
+"array.map;
+array.map.b;
+"
+`;
+
+exports[`Match snapshots of generated code for map, identifier-property.js 1`] = `
+"array[map](function () {});
+"
+`;
+
+exports[`Match snapshots of generated code for map, literal-property.js 1`] = `
+"var _a = array;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (var _i = 0; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for map, non-hof.js 1`] = `
+"array(b);
+array[b];
+array.b(c);
+array.b().c.d().e;
+function array(b) {
+  return c.d;
+}
+for (var i = 0; i < 1; i++) {
+  i++;
+}
+"
+`;
