@@ -18,8 +18,12 @@ const buildLoopStatements = template(`
 const UNDEFINED = t.identifier('undefined');
 const EMPTY_ARRAY_LITERAL = t.arrayExpression([]);
 
-const buildVariableDeclarationStatement = template(`
+const buildInitializedVariableDeclarationStatement = template(`
   var identifier = initialization;
+`);
+
+const buildVariableDeclarationStatement = template(`
+  var identifier;
 `);
 
 const buildArrayAccessExpression = template(`
@@ -128,7 +132,7 @@ class HigherOrderFunctionTransformer {
 
   getFunctionDeclarationStatement() {
     // TODO optimize: return null if `forEach(f)` and set `this.functionIdentifier` to `f`.
-    return buildVariableDeclarationStatement({
+    return buildInitializedVariableDeclarationStatement({
       identifier: this.functionIdentifier,
       initialization: this.path.get('arguments.0').node,
     });
@@ -192,7 +196,6 @@ class CollectCallbackReturnTransformer extends HigherOrderFunctionTransformer {
     return [
       buildVariableDeclarationStatement({
         identifier: this.collectorIdentifier,
-        initialization: UNDEFINED,
       }),
     ];
   }
@@ -213,7 +216,7 @@ class MapTransformer extends CollectCallbackReturnTransformer {
 
   getPreLoopStatements() {
     return [
-      buildVariableDeclarationStatement({
+      buildInitializedVariableDeclarationStatement({
         identifier: this.resultArrayIdentifier,
         initialization: EMPTY_ARRAY_LITERAL,
       }),

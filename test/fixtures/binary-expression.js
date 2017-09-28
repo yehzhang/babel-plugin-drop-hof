@@ -4,9 +4,9 @@ b + array.FUN(function f() {
 });
 
 // 2
-false & array4.FUN(function f4() {
+false & array2.FUN(function f2() {
 });
 
 // 3
-array5.FUN(function f5() {
+array3.FUN(function f3() {
 }) * 3;
