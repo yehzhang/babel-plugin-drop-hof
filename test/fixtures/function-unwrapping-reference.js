@@ -1,8 +1,10 @@
-function f2() {
+// @formatter:off
+// 1
+function f() {
 }
+array.FUN(f);
 
-array2.FUN(f2);
-
-var f3 = function () {
+// 2
+var f2 = function () {
 };
-array3.FUN(f3);
+array2.FUN(f2);

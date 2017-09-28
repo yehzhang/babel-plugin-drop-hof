@@ -1,155 +1,553 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Match snapshots of generated code for forEach, basic.js 1`] = `
-"var _a = array;
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
 
 var _f = function f() {};
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _f(_a[_i], _i, _a);
 }
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, binary-expression.js 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+for (; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+
+// @formatter:off
+// 1
+b + undefined;
+
+// 2
+var _a2 = array4;
+var _i2 = 0;
+
+var _f2 = function f4() {};
+
+for (; _i2 < _a2.length; _i2++) {
+  _f2(_a2[_i2], _i2, _a2);
+}
+
+false & undefined;
+
+// 3
+var _a3 = array5;
+var _i3 = 0;
+
+var _f3 = function f5() {};
+
+for (; _i3 < _a3.length; _i3++) {
+  _f3(_a3[_i3], _i3, _a3);
+}
+
+undefined * 3;
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, collected.js 1`] = `
 "var _a = array;
+var _i = 0;
 
 var _f = function f() {};
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _f(_a[_i], _i, _a);
 }
 
+// @formatter:off
+// 1
 var result = undefined;
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, excessive-arguments.js 1`] = `
-"array.forEach(function () {}, d, e);
+"// @formatter:off
+// 1
+array.forEach(function () {}, d, e);
 "
 `;
 
-exports[`Match snapshots of generated code for forEach, function-in-ternary.js 1`] = `
-"var result = a ? array.forEach(function f() {}) : b.c;
+exports[`Match snapshots of generated code for forEach, for.js 1`] = `
+"// @formatter:off
+// 1
+for (;;) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  for (; _i < _a.length; _i++) {
+    _f(_a[_i], _i, _a);
+  }
+}
+
+// 2
+var _a2 = array2;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+for (; _i2 < _a2.length; _i2++) {
+  _f2(_a2[_i2], _i2, _a2);
+}
+
+for (var i = undefined;;) {}
+
+// 3
+for (; i !== array2.forEach(function f2() {}););
+
+// 4
+for (;; i += array3.forEach(function f3() {}));
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, function-unwrapping.js 1`] = `
-"var _a = array;
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
 
 var _f = function () {};
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _f(_a[_i], _i, _a);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, function-unwrapping-nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function () {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function () {};
+
+  for (; _i < _a.length; _i++) {
+    _f(_a[_i], _i, _a);
+  }
+};
+
+for (; _i2 < _a2.length; _i2++) {
+  _f2(_a2[_i2], _i2, _a2);
 }
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, function-unwrapping-reference.js 1`] = `
-"function f2() {}
-var _a = array2;
-var _f = f2;
+"// @formatter:off
+// 1
+function f() {}
+var _a = array;
+var _i = 0;
+var _f = f;
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _f(_a[_i], _i, _a);
 }
 
-var f3 = function () {};
-var _a2 = array3;
-var _f2 = f3;
+// 2
 
-for (var _i2 = 0; _i2 < _a2.length; _i2++) {
+
+var f2 = function () {};
+var _a2 = array2;
+var _i2 = 0;
+var _f2 = f2;
+
+for (; _i2 < _a2.length; _i2++) {
   _f2(_a2[_i2], _i2, _a2);
 }
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, hof-no-call.js 1`] = `
-"array.forEach;
+"// @formatter:off
+// 1
+array.forEach;
+
+// 2
 array.forEach.b;
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, identifier-property.js 1`] = `
-"array[forEach](function () {});
+"// @formatter:off
+// 1
+array[forEach](function () {});
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, if.js 1`] = `
+"// @formatter:off
+// 1
+if (array) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  for (; _i < _a.length; _i++) {
+    _f(_a[_i], _i, _a);
+  }
+} else {
+  var _a2 = array2;
+  var _i2 = 0;
+
+  var _f2 = function f2() {};
+
+  for (; _i2 < _a2.length; _i2++) {
+    _f2(_a2[_i2], _i2, _a2);
+  }
+}
+
+// 2
+var _a3 = array3;
+var _i3 = 0;
+
+var _f3 = function f3() {};
+
+for (; _i3 < _a3.length; _i3++) {
+  _f3(_a3[_i3], _i3, _a3);
+}
+
+if (undefined) {}
 "
 `;
 
 exports[`Match snapshots of generated code for forEach, literal-property.js 1`] = `
-"var _a = array;
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
 
 var _f = function f() {};
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _f(_a[_i], _i, _a);
 }
 "
 `;
 
+exports[`Match snapshots of generated code for forEach, logical-expression.js 1`] = `
+"// @formatter:off
+// 1
+true || array.forEach(function f() {});
+
+// 2
+true && array.forEach(function f() {});
+
+// 3
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+for (; _i < _a.length; _i++) {
+  _f(_a[_i], _i, _a);
+}
+
+undefined && false;
+
+// 4
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {};
+
+for (; _i2 < _a2.length; _i2++) {
+  _f2(_a2[_i2], _i2, _a2);
+}
+
+undefined || false;
+
+// 5
+while (true) false && array5.forEach(function f5() {});
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function f2() {};
+
+  for (; _i < _a.length; _i++) {
+    _f(_a[_i], _i, _a);
+  }
+};
+
+for (; _i2 < _a2.length; _i2++) {
+  _f2(_a2[_i2], _i2, _a2);
+}
+
+// 2
+
+
+function f3() {
+  var _a3 = array3;
+  var _i3 = 0;
+  var _f3 = f3;
+
+  for (; _i3 < _a3.length; _i3++) {
+    _f3(_a3[_i3], _i3, _a3);
+  }
+}
+var _a4 = array3;
+var _i4 = 0;
+var _f4 = f3;
+
+for (; _i4 < _a4.length; _i4++) {
+  _f4(_a4[_i4], _i4, _a4);
+}
+"
+`;
+
 exports[`Match snapshots of generated code for forEach, non-hof.js 1`] = `
-"array(b);
+"// @formatter:off
+// 1
+array(b);
+
+// 2
 array[b];
+
+// 3
 array.b(c);
+
+// 4
 array.b().c.d().e;
+
+// 5
 function array(b) {
   return c.d;
 }
+
+// 6
 for (var i = 0; i < 1; i++) {
   i++;
 }
 "
 `;
 
+exports[`Match snapshots of generated code for forEach, ternary-expression.js 1`] = `
+"// @formatter:off
+// 1
+a ? array.forEach(function f() {}) : array2.forEach(function f2() {});
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, while.js 1`] = `
+"// @formatter:off
+// 1
+while (true) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  for (; _i < _a.length; _i++) {
+    _f(_a[_i], _i, _a);
+  }
+}
+
+// 2
+while (true) {
+  var _a2 = array3;
+  var _i2 = 0;
+
+  var _f2 = function f3() {};
+
+  for (; _i2 < _a2.length; _i2++) {
+    _f2(_a2[_i2], _i2, _a2);
+  }
+
+  var _a3 = array4;
+  var _i3 = 0;
+
+  var _f3 = function f4() {};
+
+  for (; _i3 < _a3.length; _i3++) {
+    _f3(_a3[_i3], _i3, _a3);
+  }
+}
+
+// 3
+while (array2.forEach(function f2() {}));
+
+// 4
+do {} while (array4.forEach(function f4() {}));
+"
+`;
+
 exports[`Match snapshots of generated code for map, basic.js 1`] = `
-"var _a = array;
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
 
 var _f = function f() {};
 
 var _r = [];
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _z = _f(_a[_i], _i, _a);
 
   _r.push(_z);
 }
+"
+`;
+
+exports[`Match snapshots of generated code for map, binary-expression.js 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+
+// @formatter:off
+// 1
+b + _r;
+
+// 2
+var _a2 = array4;
+var _i2 = 0;
+
+var _f2 = function f4() {};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  _z2 = _f2(_a2[_i2], _i2, _a2);
+
+  _r2.push(_z2);
+}
+
+false & _r2;
+
+// 3
+var _a3 = array5;
+var _i3 = 0;
+
+var _f3 = function f5() {};
+
+var _r3 = [];
+
+for (; _i3 < _a3.length; _i3++) {
+  _z3 = _f3(_a3[_i3], _i3, _a3);
+
+  _r3.push(_z3);
+}
+
+_r3 * 3;
 "
 `;
 
 exports[`Match snapshots of generated code for map, collected.js 1`] = `
 "var _a = array;
+var _i = 0;
 
 var _f = function f() {};
 
 var _r = [];
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _z = _f(_a[_i], _i, _a);
 
   _r.push(_z);
 }
 
+// @formatter:off
+// 1
 var result = _r;
 "
 `;
 
 exports[`Match snapshots of generated code for map, excessive-arguments.js 1`] = `
-"array.map(function () {}, d, e);
+"// @formatter:off
+// 1
+array.map(function () {}, d, e);
 "
 `;
 
-exports[`Match snapshots of generated code for map, function-in-ternary.js 1`] = `
-"var result = a ? array.map(function f() {}) : b.c;
+exports[`Match snapshots of generated code for map, for.js 1`] = `
+"// @formatter:off
+// 1
+for (;;) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  var _r = [];
+
+  for (; _i < _a.length; _i++) {
+    _z = _f(_a[_i], _i, _a);
+
+    _r.push(_z);
+  }
+}
+
+// 2
+var _a2 = array2;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  _z2 = _f2(_a2[_i2], _i2, _a2);
+
+  _r2.push(_z2);
+}
+
+for (var i = _r2;;) {}
+
+// 3
+for (; i !== array2.map(function f2() {}););
+
+// 4
+for (;; i += array3.map(function f3() {}));
 "
 `;
 
 exports[`Match snapshots of generated code for map, function-unwrapping.js 1`] = `
-"var _a = array;
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
 
 var _f = function () {};
 
 var _r = [];
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _z = _f(_a[_i], _i, _a);
 
   _r.push(_z);
@@ -157,24 +555,62 @@ for (var _i = 0; _i < _a.length; _i++) {
 "
 `;
 
+exports[`Match snapshots of generated code for map, function-unwrapping-nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function () {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function () {};
+
+  var _r = [];
+
+  for (; _i < _a.length; _i++) {
+    _z = _f(_a[_i], _i, _a);
+
+    _r.push(_z);
+  }
+};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  _z2 = _f2(_a2[_i2], _i2, _a2);
+
+  _r2.push(_z2);
+}
+"
+`;
+
 exports[`Match snapshots of generated code for map, function-unwrapping-reference.js 1`] = `
-"function f2() {}
-var _a = array2;
-var _f = f2;
+"// @formatter:off
+// 1
+function f() {}
+var _a = array;
+var _i = 0;
+var _f = f;
 var _r = [];
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _z = _f(_a[_i], _i, _a);
 
   _r.push(_z);
 }
 
-var f3 = function () {};
-var _a2 = array3;
-var _f2 = f3;
+// 2
+
+
+var f2 = function () {};
+var _a2 = array2;
+var _i2 = 0;
+var _f2 = f2;
 var _r2 = [];
 
-for (var _i2 = 0; _i2 < _a2.length; _i2++) {
+for (; _i2 < _a2.length; _i2++) {
   _z2 = _f2(_a2[_i2], _i2, _a2);
 
   _r2.push(_z2);
@@ -183,24 +619,82 @@ for (var _i2 = 0; _i2 < _a2.length; _i2++) {
 `;
 
 exports[`Match snapshots of generated code for map, hof-no-call.js 1`] = `
-"array.map;
+"// @formatter:off
+// 1
+array.map;
+
+// 2
 array.map.b;
 "
 `;
 
 exports[`Match snapshots of generated code for map, identifier-property.js 1`] = `
-"array[map](function () {});
+"// @formatter:off
+// 1
+array[map](function () {});
+"
+`;
+
+exports[`Match snapshots of generated code for map, if.js 1`] = `
+"// @formatter:off
+// 1
+if (array) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  var _r = [];
+
+  for (; _i < _a.length; _i++) {
+    _z = _f(_a[_i], _i, _a);
+
+    _r.push(_z);
+  }
+} else {
+  var _a2 = array2;
+  var _i2 = 0;
+
+  var _f2 = function f2() {};
+
+  var _r2 = [];
+
+  for (; _i2 < _a2.length; _i2++) {
+    _z2 = _f2(_a2[_i2], _i2, _a2);
+
+    _r2.push(_z2);
+  }
+}
+
+// 2
+var _a3 = array3;
+var _i3 = 0;
+
+var _f3 = function f3() {};
+
+var _r3 = [];
+
+for (; _i3 < _a3.length; _i3++) {
+  _z3 = _f3(_a3[_i3], _i3, _a3);
+
+  _r3.push(_z3);
+}
+
+if (_r3) {}
 "
 `;
 
 exports[`Match snapshots of generated code for map, literal-property.js 1`] = `
-"var _a = array;
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
 
 var _f = function f() {};
 
 var _r = [];
 
-for (var _i = 0; _i < _a.length; _i++) {
+for (; _i < _a.length; _i++) {
   _z = _f(_a[_i], _i, _a);
 
   _r.push(_z);
@@ -208,16 +702,192 @@ for (var _i = 0; _i < _a.length; _i++) {
 "
 `;
 
+exports[`Match snapshots of generated code for map, logical-expression.js 1`] = `
+"// @formatter:off
+// 1
+true || array.map(function f() {});
+
+// 2
+true && array.map(function f() {});
+
+// 3
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  _z = _f(_a[_i], _i, _a);
+
+  _r.push(_z);
+}
+
+_r && false;
+
+// 4
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  _z2 = _f2(_a2[_i2], _i2, _a2);
+
+  _r2.push(_z2);
+}
+
+_r2 || false;
+
+// 5
+while (true) false && array5.map(function f5() {});
+"
+`;
+
+exports[`Match snapshots of generated code for map, nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function f2() {};
+
+  var _r = [];
+
+  for (; _i < _a.length; _i++) {
+    _z = _f(_a[_i], _i, _a);
+
+    _r.push(_z);
+  }
+};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  _z2 = _f2(_a2[_i2], _i2, _a2);
+
+  _r2.push(_z2);
+}
+
+// 2
+
+
+function f3() {
+  var _a3 = array3;
+  var _i3 = 0;
+  var _f3 = f3;
+  var _r3 = [];
+
+  for (; _i3 < _a3.length; _i3++) {
+    _z3 = _f3(_a3[_i3], _i3, _a3);
+
+    _r3.push(_z3);
+  }
+}
+var _a4 = array3;
+var _i4 = 0;
+var _f4 = f3;
+var _r4 = [];
+
+for (; _i4 < _a4.length; _i4++) {
+  _z4 = _f4(_a4[_i4], _i4, _a4);
+
+  _r4.push(_z4);
+}
+"
+`;
+
 exports[`Match snapshots of generated code for map, non-hof.js 1`] = `
-"array(b);
+"// @formatter:off
+// 1
+array(b);
+
+// 2
 array[b];
+
+// 3
 array.b(c);
+
+// 4
 array.b().c.d().e;
+
+// 5
 function array(b) {
   return c.d;
 }
+
+// 6
 for (var i = 0; i < 1; i++) {
   i++;
 }
+"
+`;
+
+exports[`Match snapshots of generated code for map, ternary-expression.js 1`] = `
+"// @formatter:off
+// 1
+a ? array.map(function f() {}) : array2.map(function f2() {});
+"
+`;
+
+exports[`Match snapshots of generated code for map, while.js 1`] = `
+"// @formatter:off
+// 1
+while (true) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  var _r = [];
+
+  for (; _i < _a.length; _i++) {
+    _z = _f(_a[_i], _i, _a);
+
+    _r.push(_z);
+  }
+}
+
+// 2
+while (true) {
+  var _a2 = array3;
+  var _i2 = 0;
+
+  var _f2 = function f3() {};
+
+  var _r2 = [];
+
+  for (; _i2 < _a2.length; _i2++) {
+    _z2 = _f2(_a2[_i2], _i2, _a2);
+
+    _r2.push(_z2);
+  }
+
+  var _a3 = array4;
+  var _i3 = 0;
+
+  var _f3 = function f4() {};
+
+  var _r3 = [];
+
+  for (; _i3 < _a3.length; _i3++) {
+    _z3 = _f3(_a3[_i3], _i3, _a3);
+
+    _r3.push(_z3);
+  }
+}
+
+// 3
+while (array2.map(function f2() {}));
+
+// 4
+do {} while (array4.map(function f4() {}));
 "
 `;
