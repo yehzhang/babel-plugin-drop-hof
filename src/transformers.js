@@ -188,6 +188,15 @@ class CollectCallbackReturnTransformer extends HigherOrderFunctionTransformer {
     this.collectorIdentifier = path.scope.generateUidIdentifier('z');
   }
 
+  getPreCallbackStatements() {
+    return [
+      buildVariableDeclarationStatement({
+        identifier: this.collectorIdentifier,
+        initialization: UNDEFINED,
+      }),
+    ];
+  }
+
   getCallbackStatement() {
     return buildAssignmentStatement({
       left: this.collectorIdentifier,
