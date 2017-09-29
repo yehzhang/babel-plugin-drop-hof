@@ -143,7 +143,6 @@ class HigherOrderFunctionTransformer {
   }
 
   getFunctionDeclarationStatement() {
-    // TODO optimize: return null if `forEach(f)` and set `this.functionIdentifier` to `f`.
     return buildInitializedVariableDeclarationStatement({
       identifier: this.functionIdentifier,
       initialization: this.path.get('arguments.0').node,
