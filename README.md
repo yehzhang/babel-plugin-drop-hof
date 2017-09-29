@@ -36,6 +36,7 @@ var result = _r;
 ```
 
 Some corner cases are handled properly:
+
 **In**
 ```javascript
 isValid() && array.map(function (x) {
@@ -49,13 +50,7 @@ while (array.map(function (x) {
 
 **Out**
 ```javascript
-isValid() && array.map(function (x) {
-  return x * 2;
-});
-
-while (array.map(function (x) {
-  return x * 2;
-})) {}
+**Same as input**
 ```
 
 ## Installation
