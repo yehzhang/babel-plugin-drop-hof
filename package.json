@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-drop-higher-order-function",
   "version": "1.0.0",
-  "description": "Transforms higher-order function calls to loops.",
+  "description": "Transforms higher-order function calls such as `map`, `filter`, and `reduce` to loops.",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && babel -d build/ src/",
