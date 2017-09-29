@@ -46,10 +46,7 @@ class HigherOrderFunctionTransformer {
     this.path = path;
     this.arrayIdentifier = path.scope.generateUidIdentifier('a');
     this.indexIdentifier = path.scope.generateUidIdentifier('i');
-    this.itemIdentifier = buildArrayAccessExpression({
-      arrayIdentifier: this.arrayIdentifier,
-      indexIdentifier: this.indexIdentifier,
-    });
+    this.itemIdentifier = path.scope.generateUidIdentifier('e');
     this.functionIdentifier = path.scope.generateUidIdentifier('f');
   }
 
@@ -152,7 +149,15 @@ class HigherOrderFunctionTransformer {
   }
 
   getPreCallbackStatements() {
-    return [];
+    return [
+      buildInitializedVariableDeclarationStatement({
+        identifier: this.itemIdentifier,
+        initialization: buildArrayAccessExpression({
+          arrayIdentifier: this.arrayIdentifier,
+          indexIdentifier: this.indexIdentifier,
+        }),
+      }),
+    ];
   }
 
   getPostCallbackStatements() {
@@ -193,11 +198,13 @@ class CollectCallbackReturnTransformer extends HigherOrderFunctionTransformer {
   }
 
   getPreCallbackStatements() {
-    return [
-      buildVariableDeclarationStatement({
-        identifier: this.collectorIdentifier,
-      }),
-    ];
+    return super.getPreCallbackStatements().concat(
+        [
+          buildVariableDeclarationStatement({
+            identifier: this.collectorIdentifier,
+          }),
+        ]
+    );
   }
 
   getCallbackStatement() {

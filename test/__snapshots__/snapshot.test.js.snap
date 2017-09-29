@@ -9,7 +9,9 @@ var _i = 0;
 var _f = function f() {};
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 "
 `;
@@ -21,7 +23,9 @@ var _i = 0;
 var _f = function f() {};
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 
 // @formatter:off
@@ -35,7 +39,9 @@ var _i2 = 0;
 var _f2 = function f2() {};
 
 for (; _i2 < _a2.length; _i2++) {
-  _f2(_a2[_i2], _i2, _a2);
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
 }
 
 false & undefined;
@@ -47,7 +53,9 @@ var _i3 = 0;
 var _f3 = function f3() {};
 
 for (; _i3 < _a3.length; _i3++) {
-  _f3(_a3[_i3], _i3, _a3);
+  var _e3 = _a3[_i3];
+
+  _f3(_e3, _i3, _a3);
 }
 
 undefined * 3;
@@ -61,7 +69,9 @@ var _i = 0;
 var _f = function f() {};
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 
 // @formatter:off
@@ -87,7 +97,9 @@ for (;;) {
   var _f = function f() {};
 
   for (; _i < _a.length; _i++) {
-    _f(_a[_i], _i, _a);
+    var _e = _a[_i];
+
+    _f(_e, _i, _a);
   }
 }
 
@@ -98,7 +110,9 @@ var _i2 = 0;
 var _f2 = function f2() {};
 
 for (; _i2 < _a2.length; _i2++) {
-  _f2(_a2[_i2], _i2, _a2);
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
 }
 
 for (var i = undefined;;) {}
@@ -120,7 +134,9 @@ var _i = 0;
 var _f = function () {};
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 "
 `;
@@ -138,12 +154,16 @@ var _f2 = function () {
   var _f = function () {};
 
   for (; _i < _a.length; _i++) {
-    _f(_a[_i], _i, _a);
+    var _e = _a[_i];
+
+    _f(_e, _i, _a);
   }
 };
 
 for (; _i2 < _a2.length; _i2++) {
-  _f2(_a2[_i2], _i2, _a2);
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
 }
 "
 `;
@@ -157,7 +177,9 @@ var _i = 0;
 var _f = f;
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 
 // 2
@@ -169,7 +191,9 @@ var _i2 = 0;
 var _f2 = f2;
 
 for (; _i2 < _a2.length; _i2++) {
-  _f2(_a2[_i2], _i2, _a2);
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
 }
 "
 `;
@@ -201,7 +225,9 @@ if (array) {
   var _f = function f() {};
 
   for (; _i < _a.length; _i++) {
-    _f(_a[_i], _i, _a);
+    var _e = _a[_i];
+
+    _f(_e, _i, _a);
   }
 } else {
   var _a2 = array2;
@@ -210,7 +236,9 @@ if (array) {
   var _f2 = function f2() {};
 
   for (; _i2 < _a2.length; _i2++) {
-    _f2(_a2[_i2], _i2, _a2);
+    var _e2 = _a2[_i2];
+
+    _f2(_e2, _i2, _a2);
   }
 }
 
@@ -221,7 +249,9 @@ var _i3 = 0;
 var _f3 = function f3() {};
 
 for (; _i3 < _a3.length; _i3++) {
-  _f3(_a3[_i3], _i3, _a3);
+  var _e3 = _a3[_i3];
+
+  _f3(_e3, _i3, _a3);
 }
 
 if (undefined) {}
@@ -237,7 +267,9 @@ var _i = 0;
 var _f = function f() {};
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 "
 `;
@@ -257,7 +289,9 @@ var _i = 0;
 var _f = function f() {};
 
 for (; _i < _a.length; _i++) {
-  _f(_a[_i], _i, _a);
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
 }
 
 undefined && false;
@@ -269,7 +303,9 @@ var _i2 = 0;
 var _f2 = function f() {};
 
 for (; _i2 < _a2.length; _i2++) {
-  _f2(_a2[_i2], _i2, _a2);
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
 }
 
 undefined || false;
@@ -292,12 +328,16 @@ var _f2 = function f() {
   var _f = function f2() {};
 
   for (; _i < _a.length; _i++) {
-    _f(_a[_i], _i, _a);
+    var _e = _a[_i];
+
+    _f(_e, _i, _a);
   }
 };
 
 for (; _i2 < _a2.length; _i2++) {
-  _f2(_a2[_i2], _i2, _a2);
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
 }
 
 // 2
@@ -309,7 +349,9 @@ function f3() {
   var _f3 = f3;
 
   for (; _i3 < _a3.length; _i3++) {
-    _f3(_a3[_i3], _i3, _a3);
+    var _e3 = _a3[_i3];
+
+    _f3(_e3, _i3, _a3);
   }
 }
 var _a4 = array3;
@@ -317,7 +359,9 @@ var _i4 = 0;
 var _f4 = f3;
 
 for (; _i4 < _a4.length; _i4++) {
-  _f4(_a4[_i4], _i4, _a4);
+  var _e4 = _a4[_i4];
+
+  _f4(_e4, _i4, _a4);
 }
 "
 `;
@@ -365,7 +409,9 @@ while (true) {
   var _f = function f() {};
 
   for (; _i < _a.length; _i++) {
-    _f(_a[_i], _i, _a);
+    var _e = _a[_i];
+
+    _f(_e, _i, _a);
   }
 }
 
@@ -377,7 +423,9 @@ while (true) {
   var _f2 = function f3() {};
 
   for (; _i2 < _a2.length; _i2++) {
-    _f2(_a2[_i2], _i2, _a2);
+    var _e2 = _a2[_i2];
+
+    _f2(_e2, _i2, _a2);
   }
 
   var _a3 = array4;
@@ -386,7 +434,9 @@ while (true) {
   var _f3 = function f4() {};
 
   for (; _i3 < _a3.length; _i3++) {
-    _f3(_a3[_i3], _i3, _a3);
+    var _e3 = _a3[_i3];
+
+    _f3(_e3, _i3, _a3);
   }
 }
 
@@ -409,9 +459,11 @@ var _f = function f() {};
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -427,9 +479,11 @@ var _f = function f() {};
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -447,9 +501,11 @@ var _f2 = function f2() {};
 var _r2 = [];
 
 for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
   var _z2;
 
-  _z2 = _f2(_a2[_i2], _i2, _a2);
+  _z2 = _f2(_e2, _i2, _a2);
 
   _r2.push(_z2);
 }
@@ -465,9 +521,11 @@ var _f3 = function f3() {};
 var _r3 = [];
 
 for (; _i3 < _a3.length; _i3++) {
+  var _e3 = _a3[_i3];
+
   var _z3;
 
-  _z3 = _f3(_a3[_i3], _i3, _a3);
+  _z3 = _f3(_e3, _i3, _a3);
 
   _r3.push(_z3);
 }
@@ -485,9 +543,11 @@ var _f = function f() {};
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -517,9 +577,11 @@ for (;;) {
   var _r = [];
 
   for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
     var _z;
 
-    _z = _f(_a[_i], _i, _a);
+    _z = _f(_e, _i, _a);
 
     _r.push(_z);
   }
@@ -534,9 +596,11 @@ var _f2 = function f2() {};
 var _r2 = [];
 
 for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
   var _z2;
 
-  _z2 = _f2(_a2[_i2], _i2, _a2);
+  _z2 = _f2(_e2, _i2, _a2);
 
   _r2.push(_z2);
 }
@@ -562,9 +626,11 @@ var _f = function () {};
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -586,9 +652,11 @@ var _f2 = function () {
   var _r = [];
 
   for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
     var _z;
 
-    _z = _f(_a[_i], _i, _a);
+    _z = _f(_e, _i, _a);
 
     _r.push(_z);
   }
@@ -597,9 +665,11 @@ var _f2 = function () {
 var _r2 = [];
 
 for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
   var _z2;
 
-  _z2 = _f2(_a2[_i2], _i2, _a2);
+  _z2 = _f2(_e2, _i2, _a2);
 
   _r2.push(_z2);
 }
@@ -616,9 +686,11 @@ var _f = f;
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -633,9 +705,11 @@ var _f2 = f2;
 var _r2 = [];
 
 for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
   var _z2;
 
-  _z2 = _f2(_a2[_i2], _i2, _a2);
+  _z2 = _f2(_e2, _i2, _a2);
 
   _r2.push(_z2);
 }
@@ -671,9 +745,11 @@ if (array) {
   var _r = [];
 
   for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
     var _z;
 
-    _z = _f(_a[_i], _i, _a);
+    _z = _f(_e, _i, _a);
 
     _r.push(_z);
   }
@@ -686,9 +762,11 @@ if (array) {
   var _r2 = [];
 
   for (; _i2 < _a2.length; _i2++) {
+    var _e2 = _a2[_i2];
+
     var _z2;
 
-    _z2 = _f2(_a2[_i2], _i2, _a2);
+    _z2 = _f2(_e2, _i2, _a2);
 
     _r2.push(_z2);
   }
@@ -703,9 +781,11 @@ var _f3 = function f3() {};
 var _r3 = [];
 
 for (; _i3 < _a3.length; _i3++) {
+  var _e3 = _a3[_i3];
+
   var _z3;
 
-  _z3 = _f3(_a3[_i3], _i3, _a3);
+  _z3 = _f3(_e3, _i3, _a3);
 
   _r3.push(_z3);
 }
@@ -725,9 +805,11 @@ var _f = function f() {};
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -751,9 +833,11 @@ var _f = function f() {};
 var _r = [];
 
 for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
   var _z;
 
-  _z = _f(_a[_i], _i, _a);
+  _z = _f(_e, _i, _a);
 
   _r.push(_z);
 }
@@ -769,9 +853,11 @@ var _f2 = function f() {};
 var _r2 = [];
 
 for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
   var _z2;
 
-  _z2 = _f2(_a2[_i2], _i2, _a2);
+  _z2 = _f2(_e2, _i2, _a2);
 
   _r2.push(_z2);
 }
@@ -798,9 +884,11 @@ var _f2 = function f() {
   var _r = [];
 
   for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
     var _z;
 
-    _z = _f(_a[_i], _i, _a);
+    _z = _f(_e, _i, _a);
 
     _r.push(_z);
   }
@@ -809,9 +897,11 @@ var _f2 = function f() {
 var _r2 = [];
 
 for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
   var _z2;
 
-  _z2 = _f2(_a2[_i2], _i2, _a2);
+  _z2 = _f2(_e2, _i2, _a2);
 
   _r2.push(_z2);
 }
@@ -826,9 +916,11 @@ function f3() {
   var _r3 = [];
 
   for (; _i3 < _a3.length; _i3++) {
+    var _e3 = _a3[_i3];
+
     var _z3;
 
-    _z3 = _f3(_a3[_i3], _i3, _a3);
+    _z3 = _f3(_e3, _i3, _a3);
 
     _r3.push(_z3);
   }
@@ -839,9 +931,11 @@ var _f4 = f3;
 var _r4 = [];
 
 for (; _i4 < _a4.length; _i4++) {
+  var _e4 = _a4[_i4];
+
   var _z4;
 
-  _z4 = _f4(_a4[_i4], _i4, _a4);
+  _z4 = _f4(_e4, _i4, _a4);
 
   _r4.push(_z4);
 }
@@ -893,9 +987,11 @@ while (true) {
   var _r = [];
 
   for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
     var _z;
 
-    _z = _f(_a[_i], _i, _a);
+    _z = _f(_e, _i, _a);
 
     _r.push(_z);
   }
@@ -911,9 +1007,11 @@ while (true) {
   var _r2 = [];
 
   for (; _i2 < _a2.length; _i2++) {
+    var _e2 = _a2[_i2];
+
     var _z2;
 
-    _z2 = _f2(_a2[_i2], _i2, _a2);
+    _z2 = _f2(_e2, _i2, _a2);
 
     _r2.push(_z2);
   }
@@ -926,9 +1024,11 @@ while (true) {
   var _r3 = [];
 
   for (; _i3 < _a3.length; _i3++) {
+    var _e3 = _a3[_i3];
+
     var _z3;
 
-    _z3 = _f3(_a3[_i3], _i3, _a3);
+    _z3 = _f3(_e3, _i3, _a3);
 
     _r3.push(_z3);
   }
