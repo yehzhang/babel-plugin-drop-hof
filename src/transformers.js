@@ -475,9 +475,8 @@ function getCalleeMethodName(callExpressionPath) {
 export function getTransformer(callExpressionPath) {
   // Check if name of higher order function is known.
   let methodName = getCalleeMethodName(callExpressionPath);
-  let cls = HIGHER_ORDER_FUNCTION_TRANSFORMER[methodName];
-  if (cls === undefined) {
-    return null;
+  if (HIGHER_ORDER_FUNCTION_TRANSFORMER.hasOwnProperty(methodName)) {
+    return HIGHER_ORDER_FUNCTION_TRANSFORMER[methodName];
   }
-  return cls;
+  return null;
 }
