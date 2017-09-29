@@ -14,7 +14,6 @@ const buildLoopStatements = template(`
   postLoopStatements
 `);
 
-// TODO replace all with template? could template('[]') produce an ExpressionStatement?
 const UNDEFINED = t.identifier('undefined');
 const EMPTY_ARRAY_LITERAL = t.arrayExpression([]);
 const ZERO = t.numericLiteral(0);
@@ -70,6 +69,7 @@ class HigherOrderFunctionTransformer {
 
     // Check if in short-circuitable places
     // TODO instead wrap in another function
+    // TODO move to visitor? at least switch to use _hasDirectParentStatement
     if (callExpressionPath.findParent(path => path.isConditionalExpression())) {
       return false;
     }
@@ -99,7 +99,7 @@ class HigherOrderFunctionTransformer {
 
   static _isInSegmentOfDirectParentStatement(path, parentPredicate, segment) {
     let statementPath = path.getStatementParent();
-    for (let currPath = path; currPath !== statementPath; currPath = currPath.parentPath) {
+    for (var currPath = path; currPath !== statementPath; currPath = currPath.parentPath) {
       let extraPredicates = {};
       extraPredicates[segment] = currPath.node;
       if (currPath.parentPath[parentPredicate](extraPredicates)) {
@@ -113,16 +113,19 @@ class HigherOrderFunctionTransformer {
     let transformedStatements = this._getTransformedLoopStatement();
     if (this.path.parentPath.isExpressionStatement()) {
       // A bare HOF call like `array.forEach(...);`
-      this.path.parentPath.replaceWithMultiple(transformedStatements);
+      let parentPath = this.path.parentPath;
+      parentPath.replaceWithMultiple(transformedStatements);
+
+      parentPath.skip();
     } else {
       // A HOF call whose return value is collected like `var result = array.map(...);`
       let statementPath = this.path.getStatementParent();
       statementPath.insertBefore(transformedStatements);
       this.path.replaceWith(this.getReturnValue());
-    }
 
-    // TODO skip transformed paths
-    // transformedStatements.forEach(path.skip());
+      // The sibling paths are too expensive to skip.
+      this.path.skip();
+    }
   }
 
   _getTransformedLoopStatement() {
