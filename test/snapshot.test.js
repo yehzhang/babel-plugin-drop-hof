@@ -7,6 +7,8 @@ const HIGHER_ORDER_FUNCTION_NAMES = [
   'map',
   'filter',
   'every',
+  'some',
+  'reduce',
 ];
 
 describe('Match snapshots of generated code for', () => {

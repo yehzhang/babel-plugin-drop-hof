@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Match snapshots of generated code for every, array-computed.js 1`] = `
+"// @formatter:off
+// 1
+var _a = object.getArray();
+
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = true;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (!_z) {
+    _r = false;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for every, array-literal.js 1`] = `
+"// @formatter:off
+// 1
+var _a = [1, 2, 3];
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = true;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (!_z) {
+    _r = false;
+    break;
+  }
+}
+"
+`;
+
 exports[`Match snapshots of generated code for every, basic.js 1`] = `
 "// @formatter:off
 // 1
@@ -122,19 +173,6 @@ for (; _i < _a.length; _i++) {
 // @formatter:off
 // 1
 var result = _r;
-"
-`;
-
-exports[`Match snapshots of generated code for every, excessive-or-insufficient-arguments.js 1`] = `
-"// @formatter:off
-// 1
-array.every(function f() {}, d, e);
-
-// 2
-array2.every(function f2() {}, d);
-
-// 3
-array3.every();
 "
 `;
 
@@ -307,6 +345,27 @@ for (; _i2 < _a2.length; _i2++) {
     break;
   }
 }
+"
+`;
+
+exports[`Match snapshots of generated code for every, hof-called-with-three-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.every(function f() {}, a, b);
+"
+`;
+
+exports[`Match snapshots of generated code for every, hof-called-with-two-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.every(function f() {}, a);
+"
+`;
+
+exports[`Match snapshots of generated code for every, hof-called-without-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.every();
 "
 `;
 
@@ -675,6 +734,55 @@ do {} while (array4.every(function f4() {}));
 "
 `;
 
+exports[`Match snapshots of generated code for filter, array-computed.js 1`] = `
+"// @formatter:off
+// 1
+var _a = object.getArray();
+
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r.push(_e);
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for filter, array-literal.js 1`] = `
+"// @formatter:off
+// 1
+var _a = [1, 2, 3];
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r.push(_e);
+  }
+}
+"
+`;
+
 exports[`Match snapshots of generated code for filter, basic.js 1`] = `
 "// @formatter:off
 // 1
@@ -792,19 +900,6 @@ for (; _i < _a.length; _i++) {
 // @formatter:off
 // 1
 var result = _r;
-"
-`;
-
-exports[`Match snapshots of generated code for filter, excessive-or-insufficient-arguments.js 1`] = `
-"// @formatter:off
-// 1
-array.filter(function f() {}, d, e);
-
-// 2
-array2.filter(function f2() {}, d);
-
-// 3
-array3.filter();
 "
 `;
 
@@ -970,6 +1065,27 @@ for (; _i2 < _a2.length; _i2++) {
     _r2.push(_e2);
   }
 }
+"
+`;
+
+exports[`Match snapshots of generated code for filter, hof-called-with-three-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.filter(function f() {}, a, b);
+"
+`;
+
+exports[`Match snapshots of generated code for filter, hof-called-with-two-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.filter(function f() {}, a);
+"
+`;
+
+exports[`Match snapshots of generated code for filter, hof-called-without-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.filter();
 "
 `;
 
@@ -1325,6 +1441,39 @@ do {} while (array4.filter(function f4() {}));
 "
 `;
 
+exports[`Match snapshots of generated code for forEach, array-computed.js 1`] = `
+"// @formatter:off
+// 1
+var _a = object.getArray();
+
+var _i = 0;
+
+var _f = function f() {};
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, array-literal.js 1`] = `
+"// @formatter:off
+// 1
+var _a = [1, 2, 3];
+var _i = 0;
+
+var _f = function f() {};
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
+}
+"
+`;
+
 exports[`Match snapshots of generated code for forEach, basic.js 1`] = `
 "// @formatter:off
 // 1
@@ -1402,19 +1551,6 @@ for (; _i < _a.length; _i++) {
 // @formatter:off
 // 1
 var result = undefined;
-"
-`;
-
-exports[`Match snapshots of generated code for forEach, excessive-or-insufficient-arguments.js 1`] = `
-"// @formatter:off
-// 1
-array.forEach(function f() {}, d, e);
-
-// 2
-array2.forEach(function f2() {}, d);
-
-// 3
-array3.forEach();
 "
 `;
 
@@ -1526,6 +1662,27 @@ for (; _i2 < _a2.length; _i2++) {
 
   _f2(_e2, _i2, _a2);
 }
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, hof-called-with-three-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.forEach(function f() {}, a, b);
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, hof-called-with-two-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.forEach(function f() {}, a);
+"
+`;
+
+exports[`Match snapshots of generated code for forEach, hof-called-without-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.forEach();
 "
 `;
 
@@ -1779,6 +1936,51 @@ do {} while (array4.forEach(function f4() {}));
 "
 `;
 
+exports[`Match snapshots of generated code for map, array-computed.js 1`] = `
+"// @formatter:off
+// 1
+var _a = object.getArray();
+
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  _r.push(_z);
+}
+"
+`;
+
+exports[`Match snapshots of generated code for map, array-literal.js 1`] = `
+"// @formatter:off
+// 1
+var _a = [1, 2, 3];
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  _r.push(_z);
+}
+"
+`;
+
 exports[`Match snapshots of generated code for map, basic.js 1`] = `
 "// @formatter:off
 // 1
@@ -1886,19 +2088,6 @@ for (; _i < _a.length; _i++) {
 // @formatter:off
 // 1
 var result = _r;
-"
-`;
-
-exports[`Match snapshots of generated code for map, excessive-or-insufficient-arguments.js 1`] = `
-"// @formatter:off
-// 1
-array.map(function f() {}, d, e);
-
-// 2
-array2.map(function f2() {}, d);
-
-// 3
-array3.map();
 "
 `;
 
@@ -2050,6 +2239,27 @@ for (; _i2 < _a2.length; _i2++) {
 
   _r2.push(_z2);
 }
+"
+`;
+
+exports[`Match snapshots of generated code for map, hof-called-with-three-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.map(function f() {}, a, b);
+"
+`;
+
+exports[`Match snapshots of generated code for map, hof-called-with-two-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.map(function f() {}, a);
+"
+`;
+
+exports[`Match snapshots of generated code for map, hof-called-without-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.map();
 "
 `;
 
@@ -2376,5 +2586,1491 @@ while (array2.map(function f2() {}));
 
 // 4
 do {} while (array4.map(function f4() {}));
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, array-computed.js 1`] = `
+"// @formatter:off
+// 1
+var _a = object.getArray();
+
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, array-literal.js 1`] = `
+"// @formatter:off
+// 1
+var _a = [1, 2, 3];
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, basic.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, binary-expression.js 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+
+// @formatter:off
+// 1
+b + _c;
+
+// 2
+var _a2 = array2;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+
+false & _c2;
+
+// 3
+var _a3 = array3;
+var _i3 = 0;
+
+var _f3 = function f3() {};
+
+if (_a3.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c3 = _a3[0];
+
+for (; _i3 < _a3.length; _i3++) {
+  var _e3 = _a3[_i3];
+
+  var _z3;
+
+  _z3 = _f3(_c3, _e3, _i3, _a3);
+  _c3 = _z3;
+}
+
+_c3 * 3;
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, collected.js 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+
+// @formatter:off
+// 1
+var result = _c;
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, for.js 1`] = `
+"// @formatter:off
+// 1
+for (;;) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  if (_a.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c = _a[0];
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_c, _e, _i, _a);
+    _c = _z;
+  }
+}
+
+// 2
+var _a2 = array2;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+
+for (var i = _c2;;) {}
+
+// 3
+for (; i !== array2.reduce(function f2() {}););
+
+// 4
+for (;; i += array3.reduce(function f3() {}));
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, function-unwrapping.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function () {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, function-unwrapping-nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function () {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function () {};
+
+  if (_a.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c = _a[0];
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_c, _e, _i, _a);
+    _c = _z;
+  }
+};
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, function-unwrapping-reference.js 1`] = `
+"// @formatter:off
+// 1
+function f() {}
+var _a = array;
+var _i = 0;
+var _f = f;
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+
+// 2
+
+
+var f2 = function () {};
+var _a2 = array2;
+var _i2 = 0;
+var _f2 = f2;
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, hof-called-with-three-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.reduce(function f() {}, a, b);
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, hof-called-with-two-arguments.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _c = a;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, hof-called-without-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.reduce();
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, hof-no-call.js 1`] = `
+"// @formatter:off
+// 1
+array.reduce;
+
+// 2
+array.reduce.b;
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, identifier-property.js 1`] = `
+"// @formatter:off
+// 1
+array[reduce](function () {});
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, if.js 1`] = `
+"// @formatter:off
+// 1
+if (array) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  if (_a.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c = _a[0];
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_c, _e, _i, _a);
+    _c = _z;
+  }
+} else {
+  var _a2 = array2;
+  var _i2 = 0;
+
+  var _f2 = function f2() {};
+
+  if (_a2.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c2 = _a2[0];
+
+  for (; _i2 < _a2.length; _i2++) {
+    var _e2 = _a2[_i2];
+
+    var _z2;
+
+    _z2 = _f2(_c2, _e2, _i2, _a2);
+    _c2 = _z2;
+  }
+}
+
+// 2
+var _a3 = array3;
+var _i3 = 0;
+
+var _f3 = function f3() {};
+
+if (_a3.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c3 = _a3[0];
+
+for (; _i3 < _a3.length; _i3++) {
+  var _e3 = _a3[_i3];
+
+  var _z3;
+
+  _z3 = _f3(_c3, _e3, _i3, _a3);
+  _c3 = _z3;
+}
+
+if (_c3) {}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, literal-property.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, logical-expression.js 1`] = `
+"// @formatter:off
+// 1
+true || array.reduce(function f() {});
+
+// 2
+true && array.reduce(function f() {});
+
+// 3
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+
+_c && false;
+
+// 4
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {};
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+
+_c2 || false;
+
+// 5
+while (true) false && array5.reduce(function f5() {});
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function f2() {};
+
+  if (_a.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c = _a[0];
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_c, _e, _i, _a);
+    _c = _z;
+  }
+};
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+
+// 2
+
+
+function f3() {
+  var _a3 = array3;
+  var _i3 = 0;
+  var _f3 = f3;
+
+  if (_a3.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c3 = _a3[0];
+
+  for (; _i3 < _a3.length; _i3++) {
+    var _e3 = _a3[_i3];
+
+    var _z3;
+
+    _z3 = _f3(_c3, _e3, _i3, _a3);
+    _c3 = _z3;
+  }
+}
+var _a4 = array3;
+var _i4 = 0;
+var _f4 = f3;
+
+if (_a4.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c4 = _a4[0];
+
+for (; _i4 < _a4.length; _i4++) {
+  var _e4 = _a4[_i4];
+
+  var _z4;
+
+  _z4 = _f4(_c4, _e4, _i4, _a4);
+  _c4 = _z4;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, non-hof.js 1`] = `
+"// @formatter:off
+// 1
+array(b);
+
+// 2
+array[b];
+
+// 3
+array.b(c);
+
+// 4
+array.b().c.d().e;
+
+// 5
+function array(b) {
+  return c.d;
+}
+
+// 6
+for (var i = 0; i < 1; i++) {
+  i++;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, ternary-expression.js 1`] = `
+"// @formatter:off
+// 1
+a ? array.reduce(function f() {}) : array2.reduce(function f2() {});
+"
+`;
+
+exports[`Match snapshots of generated code for reduce, while.js 1`] = `
+"// @formatter:off
+// 1
+while (true) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  if (_a.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c = _a[0];
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_c, _e, _i, _a);
+    _c = _z;
+  }
+}
+
+// 2
+while (true) {
+  var _a2 = array3;
+  var _i2 = 0;
+
+  var _f2 = function f3() {};
+
+  if (_a2.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c2 = _a2[0];
+
+  for (; _i2 < _a2.length; _i2++) {
+    var _e2 = _a2[_i2];
+
+    var _z2;
+
+    _z2 = _f2(_c2, _e2, _i2, _a2);
+    _c2 = _z2;
+  }
+
+  var _a3 = array4;
+  var _i3 = 0;
+
+  var _f3 = function f4() {};
+
+  if (_a3.length === 0) {
+    throw new TypeError(messageValue);
+  }
+
+  var _c3 = _a3[0];
+
+  for (; _i3 < _a3.length; _i3++) {
+    var _e3 = _a3[_i3];
+
+    var _z3;
+
+    _z3 = _f3(_c3, _e3, _i3, _a3);
+    _c3 = _z3;
+  }
+}
+
+// 3
+while (array2.reduce(function f2() {}));
+
+// 4
+do {} while (array4.reduce(function f4() {}));
+"
+`;
+
+exports[`Match snapshots of generated code for some, array-computed.js 1`] = `
+"// @formatter:off
+// 1
+var _a = object.getArray();
+
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, array-literal.js 1`] = `
+"// @formatter:off
+// 1
+var _a = [1, 2, 3];
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, basic.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, binary-expression.js 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+
+// @formatter:off
+// 1
+b + _r;
+
+// 2
+var _a2 = array2;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+
+false & _r2;
+
+// 3
+var _a3 = array3;
+var _i3 = 0;
+
+var _f3 = function f3() {};
+
+var _r3 = false;
+
+for (; _i3 < _a3.length; _i3++) {
+  var _e3 = _a3[_i3];
+
+  var _z3;
+
+  _z3 = _f3(_e3, _i3, _a3);
+
+  if (_z3) {
+    _r3 = true;
+    break;
+  }
+}
+
+_r3 * 3;
+"
+`;
+
+exports[`Match snapshots of generated code for some, collected.js 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+
+// @formatter:off
+// 1
+var result = _r;
+"
+`;
+
+exports[`Match snapshots of generated code for some, for.js 1`] = `
+"// @formatter:off
+// 1
+for (;;) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  var _r = false;
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_e, _i, _a);
+
+    if (_z) {
+      _r = true;
+      break;
+    }
+  }
+}
+
+// 2
+var _a2 = array2;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+
+for (var i = _r2;;) {}
+
+// 3
+for (; i !== array2.some(function f2() {}););
+
+// 4
+for (;; i += array3.some(function f3() {}));
+"
+`;
+
+exports[`Match snapshots of generated code for some, function-unwrapping.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function () {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, function-unwrapping-nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function () {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function () {};
+
+  var _r = false;
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_e, _i, _a);
+
+    if (_z) {
+      _r = true;
+      break;
+    }
+  }
+};
+
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, function-unwrapping-reference.js 1`] = `
+"// @formatter:off
+// 1
+function f() {}
+var _a = array;
+var _i = 0;
+var _f = f;
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+
+// 2
+
+
+var f2 = function () {};
+var _a2 = array2;
+var _i2 = 0;
+var _f2 = f2;
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, hof-called-with-three-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.some(function f() {}, a, b);
+"
+`;
+
+exports[`Match snapshots of generated code for some, hof-called-with-two-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.some(function f() {}, a);
+"
+`;
+
+exports[`Match snapshots of generated code for some, hof-called-without-arguments.js 1`] = `
+"// @formatter:off
+// 1
+array.some();
+"
+`;
+
+exports[`Match snapshots of generated code for some, hof-no-call.js 1`] = `
+"// @formatter:off
+// 1
+array.some;
+
+// 2
+array.some.b;
+"
+`;
+
+exports[`Match snapshots of generated code for some, identifier-property.js 1`] = `
+"// @formatter:off
+// 1
+array[some](function () {});
+"
+`;
+
+exports[`Match snapshots of generated code for some, if.js 1`] = `
+"// @formatter:off
+// 1
+if (array) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  var _r = false;
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_e, _i, _a);
+
+    if (_z) {
+      _r = true;
+      break;
+    }
+  }
+} else {
+  var _a2 = array2;
+  var _i2 = 0;
+
+  var _f2 = function f2() {};
+
+  var _r2 = false;
+
+  for (; _i2 < _a2.length; _i2++) {
+    var _e2 = _a2[_i2];
+
+    var _z2;
+
+    _z2 = _f2(_e2, _i2, _a2);
+
+    if (_z2) {
+      _r2 = true;
+      break;
+    }
+  }
+}
+
+// 2
+var _a3 = array3;
+var _i3 = 0;
+
+var _f3 = function f3() {};
+
+var _r3 = false;
+
+for (; _i3 < _a3.length; _i3++) {
+  var _e3 = _a3[_i3];
+
+  var _z3;
+
+  _z3 = _f3(_e3, _i3, _a3);
+
+  if (_z3) {
+    _r3 = true;
+    break;
+  }
+}
+
+if (_r3) {}
+"
+`;
+
+exports[`Match snapshots of generated code for some, literal-property.js 1`] = `
+"// @formatter:off
+// 1
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, logical-expression.js 1`] = `
+"// @formatter:off
+// 1
+true || array.some(function f() {});
+
+// 2
+true && array.some(function f() {});
+
+// 3
+var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+
+_r && false;
+
+// 4
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {};
+
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+
+_r2 || false;
+
+// 5
+while (true) false && array5.some(function f5() {});
+"
+`;
+
+exports[`Match snapshots of generated code for some, nested.js 1`] = `
+"// @formatter:off
+// 1
+var _a2 = array;
+var _i2 = 0;
+
+var _f2 = function f() {
+  var _a = array2;
+  var _i = 0;
+
+  var _f = function f2() {};
+
+  var _r = false;
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_e, _i, _a);
+
+    if (_z) {
+      _r = true;
+      break;
+    }
+  }
+};
+
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+
+// 2
+
+
+function f3() {
+  var _a3 = array3;
+  var _i3 = 0;
+  var _f3 = f3;
+  var _r3 = false;
+
+  for (; _i3 < _a3.length; _i3++) {
+    var _e3 = _a3[_i3];
+
+    var _z3;
+
+    _z3 = _f3(_e3, _i3, _a3);
+
+    if (_z3) {
+      _r3 = true;
+      break;
+    }
+  }
+}
+var _a4 = array3;
+var _i4 = 0;
+var _f4 = f3;
+var _r4 = false;
+
+for (; _i4 < _a4.length; _i4++) {
+  var _e4 = _a4[_i4];
+
+  var _z4;
+
+  _z4 = _f4(_e4, _i4, _a4);
+
+  if (_z4) {
+    _r4 = true;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, non-hof.js 1`] = `
+"// @formatter:off
+// 1
+array(b);
+
+// 2
+array[b];
+
+// 3
+array.b(c);
+
+// 4
+array.b().c.d().e;
+
+// 5
+function array(b) {
+  return c.d;
+}
+
+// 6
+for (var i = 0; i < 1; i++) {
+  i++;
+}
+"
+`;
+
+exports[`Match snapshots of generated code for some, ternary-expression.js 1`] = `
+"// @formatter:off
+// 1
+a ? array.some(function f() {}) : array2.some(function f2() {});
+"
+`;
+
+exports[`Match snapshots of generated code for some, while.js 1`] = `
+"// @formatter:off
+// 1
+while (true) {
+  var _a = array;
+  var _i = 0;
+
+  var _f = function f() {};
+
+  var _r = false;
+
+  for (; _i < _a.length; _i++) {
+    var _e = _a[_i];
+
+    var _z;
+
+    _z = _f(_e, _i, _a);
+
+    if (_z) {
+      _r = true;
+      break;
+    }
+  }
+}
+
+// 2
+while (true) {
+  var _a2 = array3;
+  var _i2 = 0;
+
+  var _f2 = function f3() {};
+
+  var _r2 = false;
+
+  for (; _i2 < _a2.length; _i2++) {
+    var _e2 = _a2[_i2];
+
+    var _z2;
+
+    _z2 = _f2(_e2, _i2, _a2);
+
+    if (_z2) {
+      _r2 = true;
+      break;
+    }
+  }
+
+  var _a3 = array4;
+  var _i3 = 0;
+
+  var _f3 = function f4() {};
+
+  var _r3 = false;
+
+  for (; _i3 < _a3.length; _i3++) {
+    var _e3 = _a3[_i3];
+
+    var _z3;
+
+    _z3 = _f3(_e3, _i3, _a3);
+
+    if (_z3) {
+      _r3 = true;
+      break;
+    }
+  }
+}
+
+// 3
+while (array2.some(function f2() {}));
+
+// 4
+do {} while (array4.some(function f4() {}));
 "
 `;

@@ -17,6 +17,7 @@ const buildLoopStatements = template(`
 // TODO replace all with template? could template('[]') produce an ExpressionStatement?
 const UNDEFINED = t.identifier('undefined');
 const EMPTY_ARRAY_LITERAL = t.arrayExpression([]);
+const ZERO = t.numericLiteral(0);
 const FALSE = t.booleanLiteral(false);
 const TRUE = t.booleanLiteral(true);
 
@@ -42,6 +43,10 @@ const buildStatement = template(`
 
 const buildNegationExpression = template(`
   !value
+`);
+
+const buildThrowErrorStatement = template(`
+  throw new TypeError(messageValue);
 `);
 
 /**
@@ -336,11 +341,116 @@ const _buildUpdateAndBreakIfNecessaryStatement = template(`
   }
 `);
 
+class SomeTransformer extends CollectCallbackReturnTransformer {
+  constructor(path) {
+    super(path);
+    this.resultIdentifier = path.scope.generateUidIdentifier('r');
+  }
+
+  getPreLoopStatements() {
+    return [
+      buildInitializedVariableDeclarationStatement({
+        identifier: this.resultIdentifier,
+        initialization: FALSE,
+      }),
+    ];
+  }
+
+  getPostCallbackStatements() {
+    return [
+      buildUpdateAndBreakIfNecessaryStatement({
+        ifNecessaryValue: this.collectorIdentifier,
+        resultIdentifier: this.resultIdentifier,
+        resultValue: TRUE,
+      }),
+    ];
+  }
+
+  getReturnValue() {
+    return this.resultIdentifier;
+  }
+}
+
+class ReduceTransformer extends CollectCallbackReturnTransformer {
+  constructor(path) {
+    super(path);
+    this.accumulatorIdentifier = path.scope.generateUidIdentifier('c');
+  }
+
+  static getValidArgumentsLengths() {
+    return [1, 2];
+  }
+
+  getPreLoopStatements() {
+    let statements = [];
+
+    let accumulatorInitializer;
+    let callerArguments = this.path.node.arguments;
+    if (callerArguments.length === 1) {
+      statements.push(this.constructor.buildPreconditionsStatement({
+        arrayIdentifier: this.arrayIdentifier,
+        statements: buildThrowErrorStatement(this.constructor.emptyArrayErrorMessage),
+      }));
+
+      accumulatorInitializer = buildArrayAccessExpression({
+        arrayIdentifier: this.arrayIdentifier,
+        indexIdentifier: ZERO,
+      });
+    } else {
+      accumulatorInitializer = callerArguments[1];
+    }
+    statements.push(buildInitializedVariableDeclarationStatement({
+      identifier: this.accumulatorIdentifier,
+      initialization: accumulatorInitializer,
+    }));
+
+    return statements;
+  }
+
+  getCallbackCallExpression() {
+    return this.constructor.buildCallbackCallExpression({
+      functionIdentifier: this.functionIdentifier,
+      accumulatorIdentifier: this.accumulatorIdentifier,
+      itemIdentifier: this.itemIdentifier,
+      indexIdentifier: this.indexIdentifier,
+      arrayIdentifier: this.arrayIdentifier,
+    });
+  }
+
+  getPostCallbackStatements() {
+    return [
+      buildAssignmentStatement({
+        left: this.accumulatorIdentifier,
+        right: this.collectorIdentifier,
+      }),
+    ];
+  }
+
+  getReturnValue() {
+    return this.accumulatorIdentifier;
+  }
+}
+
+ReduceTransformer.buildPreconditionsStatement = template(`
+  if (arrayIdentifier.length === 0) {
+    statements
+  }
+`);
+
+ReduceTransformer.emptyArrayErrorMessage =
+    t.stringLiteral('Reduce of empty array with no initial value');
+
+ReduceTransformer.buildCallbackCallExpression = template(`
+  functionIdentifier(accumulatorIdentifier, itemIdentifier, indexIdentifier, arrayIdentifier)
+`);
+
 const HIGHER_ORDER_FUNCTION_TRANSFORMER = {
   forEach: ForEachTransformer,
   map: MapTransformer,
   filter: FilterTransformer,
   every: EveryTransformer,
+  some: SomeTransformer,
+  reduce: ReduceTransformer,
 };
 
 function getCalleeMethodName(callExpressionPath) {
