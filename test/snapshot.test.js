@@ -5,6 +5,8 @@ import {onFixtures} from './util';
 const HIGHER_ORDER_FUNCTION_NAMES = [
   'forEach',
   'map',
+  'filter',
+  'every',
 ];
 
 describe('Match snapshots of generated code for', () => {

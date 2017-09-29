@@ -17,6 +17,8 @@ const buildLoopStatements = template(`
 // TODO replace all with template? could template('[]') produce an ExpressionStatement?
 const UNDEFINED = t.identifier('undefined');
 const EMPTY_ARRAY_LITERAL = t.arrayExpression([]);
+const FALSE = t.booleanLiteral(false);
+const TRUE = t.booleanLiteral(true);
 
 const buildInitializedVariableDeclarationStatement = template(`
   var identifier = initialization;
@@ -36,6 +38,10 @@ const buildAssignmentStatement = template(`
 
 const buildStatement = template(`
   expression;
+`);
+
+const buildNegationExpression = template(`
+  !value
 `);
 
 /**
@@ -249,9 +255,92 @@ MapTransformer.buildArrayPushingStatement = template(`
   arrayIdentifier.push(itemIdentifier);
 `);
 
+class FilterTransformer extends CollectCallbackReturnTransformer {
+  constructor(path) {
+    super(path);
+    this.resultArrayIdentifier = path.scope.generateUidIdentifier('r');
+  }
+
+  getPreLoopStatements() {
+    return [
+      buildInitializedVariableDeclarationStatement({
+        identifier: this.resultArrayIdentifier,
+        initialization: EMPTY_ARRAY_LITERAL,
+      }),
+    ];
+  }
+
+  getPostCallbackStatements() {
+    return [
+      this.constructor.buildArrayPushingIfNecessaryStatement({
+        ifNecessaryValue: this.collectorIdentifier,
+        arrayIdentifier: this.resultArrayIdentifier,
+        itemIdentifier: this.itemIdentifier,
+      }),
+    ];
+  }
+
+  getReturnValue() {
+    return this.resultArrayIdentifier;
+  }
+}
+
+FilterTransformer.buildArrayPushingIfNecessaryStatement = template(`
+  if (ifNecessaryValue) {
+    arrayIdentifier.push(itemIdentifier);
+  }
+`);
+
+class EveryTransformer extends CollectCallbackReturnTransformer {
+  constructor(path) {
+    super(path);
+    this.resultIdentifier = path.scope.generateUidIdentifier('r');
+  }
+
+  getPreLoopStatements() {
+    return [
+      buildInitializedVariableDeclarationStatement({
+        identifier: this.resultIdentifier,
+        initialization: TRUE,
+      }),
+    ];
+  }
+
+  getPostCallbackStatements() {
+    return [
+      buildUpdateAndBreakIfNecessaryStatement({
+        ifNecessaryValue: buildNegationExpression({
+          value: this.collectorIdentifier,
+        }),
+        resultIdentifier: this.resultIdentifier,
+        resultValue: FALSE,
+      }),
+    ];
+  }
+
+  getReturnValue() {
+    return this.resultIdentifier;
+  }
+}
+
+function buildUpdateAndBreakIfNecessaryStatement(opts) {
+  opts = Object.assign({}, opts);
+  opts.breakStatement = t.breakStatement();
+  return _buildUpdateAndBreakIfNecessaryStatement(opts);
+}
+
+const _buildUpdateAndBreakIfNecessaryStatement = template(`
+  if (ifNecessaryValue) {
+    resultIdentifier = resultValue;
+    breakStatement
+  }
+`);
+
 const HIGHER_ORDER_FUNCTION_TRANSFORMER = {
   forEach: ForEachTransformer,
   map: MapTransformer,
+  filter: FilterTransformer,
+  every: EveryTransformer,
 };
 
 function getCalleeMethodName(callExpressionPath) {
