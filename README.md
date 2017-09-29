@@ -1,5 +1,6 @@
 # babel-plugin-drop-higher-order-function
 > Transforms higher-order function calls to loops.
+
 Currently supported higher-order functions are: `forEach`, `map`, `filter`, `every`, `some`, and `reduce`.
 
 ## Example
