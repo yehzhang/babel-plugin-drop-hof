@@ -80,10 +80,16 @@ var result = undefined;
 "
 `;
 
-exports[`Match snapshots of generated code for forEach, excessive-arguments.js 1`] = `
+exports[`Match snapshots of generated code for forEach, excessive-or-insufficient-arguments.js 1`] = `
 "// @formatter:off
 // 1
-array.forEach(function () {}, d, e);
+array.forEach(function f() {}, d, e);
+
+// 2
+array2.forEach(function f2() {}, d);
+
+// 3
+array3.forEach();
 "
 `;
 
@@ -558,10 +564,16 @@ var result = _r;
 "
 `;
 
-exports[`Match snapshots of generated code for map, excessive-arguments.js 1`] = `
+exports[`Match snapshots of generated code for map, excessive-or-insufficient-arguments.js 1`] = `
 "// @formatter:off
 // 1
-array.map(function () {}, d, e);
+array.map(function f() {}, d, e);
+
+// 2
+array2.map(function f2() {}, d);
+
+// 3
+array3.map();
 "
 `;
 

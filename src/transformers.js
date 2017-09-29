@@ -82,7 +82,8 @@ class HigherOrderFunctionTransformer {
   }
 
   static getValidArgumentsLengths() {
-    return [1, 2];
+    // TODO handle thisArg
+    return [1];
   }
 
   static _isInSegmentOfDirectParentStatement(path, parentPredicate, segment) {
