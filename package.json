@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-drop-higher-order-function",
+  "name": "babel-plugin-drop-hof",
   "version": "1.0.0",
   "description": "Transforms higher-order function calls such as `map`, `filter`, and `reduce` to loops.",
   "main": "build/index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yehzhang/babel-plugin-drop-higher-order-function.git"
+    "url": "git+https://github.com/yehzhang/babel-plugin-drop-hof.git"
   },
   "author": "Simon Zhang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yehzhang/babel-plugin-drop-higher-order-function/issues"
+    "url": "https://github.com/yehzhang/babel-plugin-drop-hof/issues"
   },
-  "homepage": "https://github.com/yehzhang/babel-plugin-drop-higher-order-function#readme",
+  "homepage": "https://github.com/yehzhang/babel-plugin-drop-hof#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",

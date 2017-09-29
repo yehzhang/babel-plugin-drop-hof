@@ -1,4 +1,4 @@
-# babel-plugin-drop-higher-order-function
+# babel-plugin-drop-hof
 > Transforms higher-order function calls to loops.
 
 Currently supported higher-order functions are: `forEach`, `map`, `filter`, `every`, `some`, and `reduce`.
@@ -55,7 +55,7 @@ while (array.map(function (x) {
 
 ## Installation
 ```sh
-npm install babel-plugin-drop-higher-order-function
+npm install --save babel-plugin-drop-hof
 ```
 
 ## Usage
@@ -65,20 +65,20 @@ npm install babel-plugin-drop-higher-order-function
 
 ```json
 {
-  "plugins": ["babel-plugin-drop-higher-order-function"]
+  "plugins": ["babel-plugin-drop-hof"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-babel --plugins babel-plugin-drop-higher-order-function script.js
+babel --plugins babel-plugin-drop-hof script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["babel-plugin-drop-higher-order-function"]
+  plugins: ["babel-plugin-drop-hof"]
 });
 ```
