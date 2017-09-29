@@ -50,7 +50,7 @@ while (array.map(function (x) {
 
 **Out**
 ```javascript
-**Same as input**
+// **Same as input**
 ```
 
 ## Installation
