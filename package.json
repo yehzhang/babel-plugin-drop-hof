@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-drop-hof",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transforms higher-order function calls such as `map`, `filter`, and `reduce` to loops.",
   "main": "build/index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.0",
     "jest": "^21.2.0",
+    "lodash": "^4.17.4",
     "regenerator-runtime": "^0.11.0"
   },
   "dependencies": {
