@@ -7,17 +7,17 @@ while (true) {
 
 // 2
 while (true) {
-  array3.FUN(function f3() {
+  array2.FUN(function f2() {
   });
-  array4.FUN(function f4() {
+  array3.FUN(function f3() {
   });
 }
 
 // 3
-while (array2.FUN(function f2() {
+while (array4.FUN(function f4() {
 }));
 
 // 4
 do {
-} while (array4.FUN(function f4() {
+} while (array5.FUN(function f5() {
 }));

@@ -1014,10 +1014,10 @@ for (; _i2 < _a2.length; _i2++) {
 for (var i = _r2;;) {}
 
 // 3
-for (; i !== array2.every(function f2() {}););
+for (; i !== array3.every(function f3() {}););
 
 // 4
-for (;; i += array3.every(function f3() {}));
+for (;; i += array4.every(function f4() {}));
 "
 `;
 
@@ -1068,10 +1068,10 @@ for (; _i2 < _a2.length; _i2++) {
 for (var i = _r2;;) {}
 
 // 3
-for (; i !== array2.filter(function f2() {}););
+for (; i !== array3.filter(function f3() {}););
 
 // 4
-for (;; i += array3.filter(function f3() {}));
+for (;; i += array4.filter(function f4() {}));
 "
 `;
 
@@ -1106,10 +1106,10 @@ for (; _i2 < _a2.length; _i2++) {
 for (var i = undefined;;) {}
 
 // 3
-for (; i !== array2.forEach(function f2() {}););
+for (; i !== array3.forEach(function f3() {}););
 
 // 4
-for (;; i += array3.forEach(function f3() {}));
+for (;; i += array4.forEach(function f4() {}));
 "
 `;
 
@@ -1156,10 +1156,10 @@ for (; _i2 < _a2.length; _i2++) {
 for (var i = _r2;;) {}
 
 // 3
-for (; i !== array2.map(function f2() {}););
+for (; i !== array3.map(function f3() {}););
 
 // 4
-for (;; i += array3.map(function f3() {}));
+for (;; i += array4.map(function f4() {}));
 "
 `;
 
@@ -1212,10 +1212,10 @@ for (; _i2 < _a2.length; _i2++) {
 for (var i = _c2;;) {}
 
 // 3
-for (; i !== array2.reduce(function f2() {}););
+for (; i !== array3.reduce(function f3() {}););
 
 // 4
-for (;; i += array3.reduce(function f3() {}));
+for (;; i += array4.reduce(function f4() {}));
 "
 `;
 
@@ -1268,10 +1268,10 @@ for (; _i2 < _a2.length; _i2++) {
 for (var i = _r2;;) {}
 
 // 3
-for (; i !== array2.some(function f2() {}););
+for (; i !== array3.some(function f3() {}););
 
 // 4
-for (;; i += array3.some(function f3() {}));
+for (;; i += array4.some(function f4() {}));
 "
 `;
 
@@ -3685,10 +3685,10 @@ while (true) {
 
 // 2
 while (true) {
-  var _a2 = array3;
+  var _a2 = array2;
   var _i2 = 0;
 
-  var _f2 = function f3() {};
+  var _f2 = function f2() {};
 
   var _r2 = true;
 
@@ -3705,10 +3705,10 @@ while (true) {
     }
   }
 
-  var _a3 = array4;
+  var _a3 = array3;
   var _i3 = 0;
 
-  var _f3 = function f4() {};
+  var _f3 = function f3() {};
 
   var _r3 = true;
 
@@ -3727,10 +3727,10 @@ while (true) {
 }
 
 // 3
-while (array2.every(function f2() {}));
+while (array4.every(function f4() {}));
 
 // 4
-do {} while (array4.every(function f4() {}));
+do {} while (array5.every(function f5() {}));
 "
 `;
 
@@ -3760,10 +3760,10 @@ while (true) {
 
 // 2
 while (true) {
-  var _a2 = array3;
+  var _a2 = array2;
   var _i2 = 0;
 
-  var _f2 = function f3() {};
+  var _f2 = function f2() {};
 
   var _r2 = [];
 
@@ -3779,10 +3779,10 @@ while (true) {
     }
   }
 
-  var _a3 = array4;
+  var _a3 = array3;
   var _i3 = 0;
 
-  var _f3 = function f4() {};
+  var _f3 = function f3() {};
 
   var _r3 = [];
 
@@ -3800,10 +3800,10 @@ while (true) {
 }
 
 // 3
-while (array2.filter(function f2() {}));
+while (array4.filter(function f4() {}));
 
 // 4
-do {} while (array4.filter(function f4() {}));
+do {} while (array5.filter(function f5() {}));
 "
 `;
 
@@ -3825,10 +3825,10 @@ while (true) {
 
 // 2
 while (true) {
-  var _a2 = array3;
+  var _a2 = array2;
   var _i2 = 0;
 
-  var _f2 = function f3() {};
+  var _f2 = function f2() {};
 
   for (; _i2 < _a2.length; _i2++) {
     var _e2 = _a2[_i2];
@@ -3836,10 +3836,10 @@ while (true) {
     _f2(_e2, _i2, _a2);
   }
 
-  var _a3 = array4;
+  var _a3 = array3;
   var _i3 = 0;
 
-  var _f3 = function f4() {};
+  var _f3 = function f3() {};
 
   for (; _i3 < _a3.length; _i3++) {
     var _e3 = _a3[_i3];
@@ -3849,10 +3849,10 @@ while (true) {
 }
 
 // 3
-while (array2.forEach(function f2() {}));
+while (array4.forEach(function f4() {}));
 
 // 4
-do {} while (array4.forEach(function f4() {}));
+do {} while (array5.forEach(function f5() {}));
 "
 `;
 
@@ -3880,10 +3880,10 @@ while (true) {
 
 // 2
 while (true) {
-  var _a2 = array3;
+  var _a2 = array2;
   var _i2 = 0;
 
-  var _f2 = function f3() {};
+  var _f2 = function f2() {};
 
   var _r2 = [];
 
@@ -3897,10 +3897,10 @@ while (true) {
     _r2.push(_z2);
   }
 
-  var _a3 = array4;
+  var _a3 = array3;
   var _i3 = 0;
 
-  var _f3 = function f4() {};
+  var _f3 = function f3() {};
 
   var _r3 = [];
 
@@ -3916,10 +3916,10 @@ while (true) {
 }
 
 // 3
-while (array2.map(function f2() {}));
+while (array4.map(function f4() {}));
 
 // 4
-do {} while (array4.map(function f4() {}));
+do {} while (array5.map(function f5() {}));
 "
 `;
 
@@ -3950,10 +3950,10 @@ while (true) {
 
 // 2
 while (true) {
-  var _a2 = array3;
+  var _a2 = array2;
   var _i2 = 0;
 
-  var _f2 = function f3() {};
+  var _f2 = function f2() {};
 
   if (_a2.length === 0) {
     throw new TypeError(messageValue);
@@ -3970,10 +3970,10 @@ while (true) {
     _c2 = _z2;
   }
 
-  var _a3 = array4;
+  var _a3 = array3;
   var _i3 = 0;
 
-  var _f3 = function f4() {};
+  var _f3 = function f3() {};
 
   if (_a3.length === 0) {
     throw new TypeError(messageValue);
@@ -3992,10 +3992,10 @@ while (true) {
 }
 
 // 3
-while (array2.reduce(function f2() {}));
+while (array4.reduce(function f4() {}));
 
 // 4
-do {} while (array4.reduce(function f4() {}));
+do {} while (array5.reduce(function f5() {}));
 "
 `;
 
@@ -4026,10 +4026,10 @@ while (true) {
 
 // 2
 while (true) {
-  var _a2 = array3;
+  var _a2 = array2;
   var _i2 = 0;
 
-  var _f2 = function f3() {};
+  var _f2 = function f2() {};
 
   var _r2 = false;
 
@@ -4046,10 +4046,10 @@ while (true) {
     }
   }
 
-  var _a3 = array4;
+  var _a3 = array3;
   var _i3 = 0;
 
-  var _f3 = function f4() {};
+  var _f3 = function f3() {};
 
   var _r3 = false;
 
@@ -4068,9 +4068,9 @@ while (true) {
 }
 
 // 3
-while (array2.some(function f2() {}));
+while (array4.some(function f4() {}));
 
 // 4
-do {} while (array4.some(function f4() {}));
+do {} while (array5.some(function f5() {}));
 "
 `;
