@@ -11,7 +11,7 @@ const HIGHER_ORDER_FUNCTION_NAMES = [
   'reduce',
 ];
 
-describe('Match snapshots of generated code for', () => {
+describe('Match snapshots of generated code', () => {
   testFixtures((sourceCode) => {
     let output = babel.transform(sourceCode, {
       plugins: [plugin],
@@ -22,10 +22,12 @@ describe('Match snapshots of generated code for', () => {
 
 function testFixtures(f) {
   onFixtures((fixtureName, sourceCode) => {
-    HIGHER_ORDER_FUNCTION_NAMES.forEach(functionName => {
-      test(`${functionName}, ${fixtureName}`, () => {
-        let sourceCodeInstance = sourceCode.replace(/\bFUN\b/g, functionName);
-        f(sourceCodeInstance);
+    describe(`of ${fixtureName}`, () => {
+      HIGHER_ORDER_FUNCTION_NAMES.forEach(functionName => {
+        test(`for ${functionName}.`, () => {
+          let sourceCodeInstance = sourceCode.replace(/\bFUN\b/g, functionName);
+          f(sourceCodeInstance);
+        });
       });
     });
   });
