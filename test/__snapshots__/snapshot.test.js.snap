@@ -816,6 +816,238 @@ _r3 * 3;
 "
 `;
 
+exports[`Match snapshots of generated code of chained.js for every. 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = true;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (!_z) {
+    _r = false;
+    break;
+  }
+}
+
+var _a2 = _r;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = true;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (!_z2) {
+    _r2 = false;
+    break;
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code of chained.js for filter. 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r.push(_e);
+  }
+}
+
+var _a2 = _r;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2.push(_e2);
+  }
+}
+"
+`;
+
+exports[`Match snapshots of generated code of chained.js for forEach. 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  _f(_e, _i, _a);
+}
+
+var _a2 = undefined;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  _f2(_e2, _i2, _a2);
+}
+"
+`;
+
+exports[`Match snapshots of generated code of chained.js for map. 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = [];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  _r.push(_z);
+}
+
+var _a2 = _r;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = [];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  _r2.push(_z2);
+}
+"
+`;
+
+exports[`Match snapshots of generated code of chained.js for reduce. 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+if (_a.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c = _a[0];
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_c, _e, _i, _a);
+  _c = _z;
+}
+
+var _a2 = _c;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+if (_a2.length === 0) {
+  throw new TypeError(messageValue);
+}
+
+var _c2 = _a2[0];
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_c2, _e2, _i2, _a2);
+  _c2 = _z2;
+}
+"
+`;
+
+exports[`Match snapshots of generated code of chained.js for some. 1`] = `
+"var _a = array;
+var _i = 0;
+
+var _f = function f() {};
+
+var _r = false;
+
+for (; _i < _a.length; _i++) {
+  var _e = _a[_i];
+
+  var _z;
+
+  _z = _f(_e, _i, _a);
+
+  if (_z) {
+    _r = true;
+    break;
+  }
+}
+
+var _a2 = _r;
+var _i2 = 0;
+
+var _f2 = function f2() {};
+
+var _r2 = false;
+
+for (; _i2 < _a2.length; _i2++) {
+  var _e2 = _a2[_i2];
+
+  var _z2;
+
+  _z2 = _f2(_e2, _i2, _a2);
+
+  if (_z2) {
+    _r2 = true;
+    break;
+  }
+}
+"
+`;
+
 exports[`Match snapshots of generated code of collected.js for every. 1`] = `
 "var _a = array;
 var _i = 0;
